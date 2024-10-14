@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <main>
+            <div>
+                <button id ="rollsubmit" onclick="rolldice(event)"> Roll my dices</button>
+
+                <p id = "drolls"></p>
+                <p id = "droll"></p>
+                <input type ="range" oninput="rangeValue.innerText = this.value + ' dice'" name="diceamount" id="diceamount" min="1" max="10"  step="1">
+                <p id = rangeValue>Amount of dice</p>
+                <input type ="range" oninput="rangeValuesides.innerText = this.value + ' sides'" name="sidecount" id="sidecount" min="2" max="20"  step="1">
+                <p id = rangeValuesides>Amount of sides</p>
+            </div>
+        </main>
+      
+    </body>
+    <script src="dice.js" async defer></script>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Movie Bucketlist</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Danfo&family=Freeman&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <main>
+            <div class="moviedisp">  
+                <div id="movierecimgcont"> </div>
+                <h2 id="movierectext"> </h2>
+                <p id ="imdbrating"> </p>
+            </div>
+            <div class ="maininput">
+                <form id ="movieinput">
+                <label for="avtime"> How long of a movie do you want?</label>
+                <select name="avtime" id="avtime">
+                    <option value="-1.5h"> Less than 1.5h </option>
+                    <option value="2h"> Between 1.5h to 2h </option>
+                    <option value="3h"> Between 2h to 3h </option>
+                    <option value="3h-"> Over 3h </option>
+                </select>
+
+
+                <label for="avgenre"> What film genre do you want to see?</label>
+                <select name="avgenre" id="avgenre">
+                    <option value="drama"> Drama </option>
+                    <option value="action"> Action </option>
+                    <option value="crime"> Crime </option>
+                    <option value="horror"> Horror </option>
+                    <option value="western"> Western </option>
+                    <option value="comedy"> Comedy </option>
+                    <option value="adventure"> Adventure </option>
+                </select>
+
+
+                <label for="avera"> From what decade should this be from?</label>
+                <input type ="range" oninput="rangeValue.innerText = this.value + 's'" name="avera" id="avera" min="1900" max="2020"  step="10">
+                <p id = rangeValue>1960s</p>
+
+
+
+                <!--                 <label for="avera"> From what decade should this be from?</label>
+                <select name="avera" id="avera">
+                    <option value="40s"> 1940s </option>
+                    <option value="50s"> 1950s </option>
+                    <option value="60s"> 1960s </option>
+                    <option value="70s"> 1970s </option>
+                    <option value="80s"> 1980s </option>
+                    <option value="90s"> 1990s </option>
+                    <option value="00s"> 2000s </option>
+                    <option value="10s"> 2010s </option>
+                    <option value="20s"> 2020s </option>
+                </select> -->
+
+
+                <button id ="subbutton" onclick="submitform(event)"> Give me a suggestion! </button>
+                <button id ="randombutton" onclick="randomform(event)"> Surprise me! </button>
+            </form>
+        </main>
+
+        <button id ="reloadbtn" href ="#" onclick= "location.reload(true);">Refresh list</button>
+
+        <script src="data.js" async defer></script>
+        <script src="script.js" async defer></script>
+    </body>
+</html>

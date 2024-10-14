@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Freeman, Helvetica, Arial, sans-serif;
+    --dark: #111;
+    --darker: #14213d;
+    --cream: #e5e5e5;
+    --creamblue: #ddddff;
+    --orange: #fca311;
+    --red: #CE5A67;
+    --lightblue: #009fff;
+
+}
+
+body{
+    background-color: var(--dark);
+    background-image: repeating-linear-gradient(45deg, var(--darker) 0%, var(--dark) 10%);    
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+main{
+    border-radius: 16px;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    background-color: var(--cream);
+    background-image: repeating-linear-gradient(31deg, var(--cream) 0%, var(--creamblue)50%, var(--cream) 100%);    
+    padding: 15px;
+    color: var(--dark); 
+    min-width: 300px ;
+    filter:drop-shadow(0 0 30px var(--lightblue));
+    max-width: 350px;
+}
+
+.moviedisp *{
+    margin-bottom: 0;
+    font-weight: 900;
+
+}
+
+.moviedisp h2, p {
+    cursor: default;
+}
+
+
+.maininput form{
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 10pt;
+}
+
+.maininput form *{
+
+    margin: 5px 0;
+
+}
+
+#movierecimgcont{
+    margin: auto;
+    display:flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 3px solid var(--dark);
+
+}
+.moviereccont{
+    width: 250px;
+    margin: auto;
+}
+
+#movierecimgcont img{
+    width: 100%;
+    max-width: 330px;
+    max-height: 500px;
+}
+
+select {
+    background-color: var(--dark);
+    color: var(--cream);
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 0 2px;
+    cursor: pointer;
+}
+
+option {
+    font-weight: 500;
+
+}
+
+#movieinput button{
+    border:none;
+    color:var(--dark);
+    background-color: var(--orange);
+    border: solid var(--dark) 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    height: 30px;
+}
+
+
+#imdbrating {
+    font-weight: 600;
+    color:var(--red);
+    margin-bottom: 3px;
+}
+
+button:hover{
+    transform: rotate(.2deg)scale(1.01);
+    transition-duration: 100ms;
+}
+
+#reloadbtn{
+    font-size: 12px;
+    padding: 5px;
+    position: sticky;
+    top:15px;
+    left:100%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    background-color: var(--orange);
+}
+
+#avera {
+    appearance: none;
+    color:var(--dark);
+    background: var(--dark);
+    border-radius: 8px;
+    height: 25px;
+    border: solid 1px var(--dark);
+    padding:2px;
+    
+}
+
+#avera::-webkit-slider-thumb{
+    appearance: none;
+    background-color: var(--cream);
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    outline: solid 2px var(--cream);
+    border: solid 2px var(--darker);
+    cursor: pointer;
+}
