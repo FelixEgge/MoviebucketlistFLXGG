@@ -24,6 +24,6 @@ function rolldice(event){
     narrowroll.forEach(n=> rollsum += n);
 
     
-    document.getElementById("drolls").innerText= narrowroll;
-    document.getElementById("droll").innerText= rollsum;
+    document.getElementById("drolls").innerText= "Individual rolls: " + narrowroll ;
+    document.getElementById("droll").innerText= "Total: " + rollsum;
 }
